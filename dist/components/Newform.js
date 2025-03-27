@@ -105,12 +105,12 @@ const Newform = _ref => {
   };
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "App"
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "App-header"
-  }, "Your App Name"), /*#__PURE__*/_react.default.createElement("form", {
+  }, /*#__PURE__*/_react.default.createElement("form", {
     onSubmit: handleSubmit,
     className: "p-4 bg-gray-100 items-center"
-  }, /*#__PURE__*/_react.default.createElement("h1", {
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "App-header"
+  }, "Your App Name"), /*#__PURE__*/_react.default.createElement("h1", {
     className: "text-xl font-bold mb-4"
   }, form && form.id ? 'Edit Form' : 'Add Form'), form && Object.keys(form).map(key => getFormDetails(key, typeof form[key], form[key])), /*#__PURE__*/_react.default.createElement("button", {
     className: "bg-green-500 text-white px-4 py-2 rounded",
