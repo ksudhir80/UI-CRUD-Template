@@ -1,3 +1,3 @@
 import Newform from "./components/Newform";
-import '/index.css';
+import './index.css';
 export { Newform };
