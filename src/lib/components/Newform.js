@@ -84,7 +84,7 @@ const Newform = ({ entity,addForm,updateForm }) => {
 
 
   return (
-    <form onSubmit={handleSubmit} className="p-4 bg-gray-100">
+    <form onSubmit={handleSubmit} className="p-4 bg-gray-100 items-center">
       <h1 className="text-xl font-bold mb-4">
         {form && form.id ? 'Edit Form' : 'Add Form'}
       </h1>

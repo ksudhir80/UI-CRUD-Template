@@ -4,16 +4,6 @@ module.exports = {
     extend: {},
   },
   plugins: [
-    copy({
-      targets: [
-        { src: 'src/**/*', dest: 'dist' },
-        {
-          src: ['src/components/**/*', '!**/*.spec.*'],
-          dest: 'dist',
-        },
-      ],
-      verbose: true,
-      flatten: false,
-    })
+    
    ]
 };
