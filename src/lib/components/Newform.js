@@ -1,5 +1,5 @@
 import React, { useEffect,useState,memo } from 'react';
-//import '../index.css';
+import '../index.css';
 
 const Newform = ({ entity,addForm,updateForm }) => {
   const [form, setForm] = useState(entity);
