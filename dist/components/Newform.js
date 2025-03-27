@@ -12,6 +12,7 @@ require("core-js/modules/esnext.iterator.map.js");
 require("core-js/modules/web.dom-collections.iterator.js");
 var _react = _interopRequireWildcard(require("react"));
 require("../index.css");
+require("../App.css");
 function _getRequireWildcardCache(e) { if ("function" != typeof WeakMap) return null; var r = new WeakMap(), t = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(e) { return e ? t : r; })(e); }
 function _interopRequireWildcard(e, r) { if (!r && e && e.__esModule) return e; if (null === e || "object" != typeof e && "function" != typeof e) return { default: e }; var t = _getRequireWildcardCache(r); if (t && t.has(e)) return t.get(e); var n = { __proto__: null }, a = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var u in e) if ("default" !== u && {}.hasOwnProperty.call(e, u)) { var i = a ? Object.getOwnPropertyDescriptor(e, u) : null; i && (i.get || i.set) ? Object.defineProperty(n, u, i) : n[u] = e[u]; } return n.default = e, t && t.set(e, n), n; }
 function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
@@ -102,14 +103,16 @@ const Newform = _ref => {
         }));
     }
   };
-  return /*#__PURE__*/_react.default.createElement("form", {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
+    className: "App-header"
+  }, "Sudhir Kunnure Apps"), /*#__PURE__*/_react.default.createElement("form", {
     onSubmit: handleSubmit,
-    className: "p-4 bg-gray-100 items-center"
+    className: "App p-4 bg-gray-100 items-center"
   }, /*#__PURE__*/_react.default.createElement("h1", {
     className: "text-xl font-bold mb-4"
   }, form && form.id ? 'Edit Form' : 'Add Form'), form && Object.keys(form).map(key => getFormDetails(key, typeof form[key], form[key])), /*#__PURE__*/_react.default.createElement("button", {
     className: "bg-green-500 text-white px-4 py-2 rounded",
     type: "submit"
-  }, form && form.id ? 'Update' : 'Add'));
+  }, form && form.id ? 'Update' : 'Add')));
 };
 var _default = exports.default = /*#__PURE__*/(0, _react.memo)(Newform);

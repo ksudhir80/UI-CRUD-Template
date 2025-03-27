@@ -1,5 +1,6 @@
 import React, { useEffect,useState,memo } from 'react';
 import '../index.css';
+import '../App.css';
 
 const Newform = ({ entity,addForm,updateForm }) => {
   const [form, setForm] = useState(entity);
@@ -84,7 +85,9 @@ const Newform = ({ entity,addForm,updateForm }) => {
 
 
   return (
-    <form onSubmit={handleSubmit} className="p-4 bg-gray-100 items-center">
+    <>
+    <div className='App-header'>Sudhir Kunnure Apps</div>
+    <form onSubmit={handleSubmit} className="App p-4 bg-gray-100 items-center">
       <h1 className="text-xl font-bold mb-4">
         {form && form.id ? 'Edit Form' : 'Add Form'}
       </h1>
@@ -94,6 +97,7 @@ const Newform = ({ entity,addForm,updateForm }) => {
         {form && form.id ? 'Update' : 'Add'}
       </button>
     </form>
+    </>
   );
 };
 
