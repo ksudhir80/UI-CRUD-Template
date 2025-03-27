@@ -103,11 +103,13 @@ const Newform = _ref => {
         }));
     }
   };
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement("div", {
+    className: "App"
+  }, /*#__PURE__*/_react.default.createElement("div", {
     className: "App-header"
-  }, "Sudhir Kunnure Apps"), /*#__PURE__*/_react.default.createElement("form", {
+  }, "Your App Name"), /*#__PURE__*/_react.default.createElement("form", {
     onSubmit: handleSubmit,
-    className: "App p-4 bg-gray-100 items-center"
+    className: "p-4 bg-gray-100 items-center"
   }, /*#__PURE__*/_react.default.createElement("h1", {
     className: "text-xl font-bold mb-4"
   }, form && form.id ? 'Edit Form' : 'Add Form'), form && Object.keys(form).map(key => getFormDetails(key, typeof form[key], form[key])), /*#__PURE__*/_react.default.createElement("button", {

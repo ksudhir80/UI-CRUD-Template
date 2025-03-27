@@ -85,9 +85,9 @@ const Newform = ({ entity,addForm,updateForm }) => {
 
 
   return (
-    <>
-    <div className='App-header'>Sudhir Kunnure Apps</div>
-    <form onSubmit={handleSubmit} className="App p-4 bg-gray-100 items-center">
+    <div className='App'>
+    <div className='App-header'>Your App Name</div>
+    <form onSubmit={handleSubmit} className="p-4 bg-gray-100 items-center">
       <h1 className="text-xl font-bold mb-4">
         {form && form.id ? 'Edit Form' : 'Add Form'}
       </h1>
@@ -97,7 +97,7 @@ const Newform = ({ entity,addForm,updateForm }) => {
         {form && form.id ? 'Update' : 'Add'}
       </button>
     </form>
-    </>
+    </div>
   );
 };
 
