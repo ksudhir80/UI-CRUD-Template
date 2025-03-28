@@ -1,6 +1,6 @@
 import React, { useEffect,useState,memo } from 'react';
 import '../index.css';
-import '../App.css';
+import './App.css';
 
 const Newform = ({ entity,addForm,updateForm }) => {
   const [form, setForm] = useState(entity);
@@ -86,11 +86,11 @@ const Newform = ({ entity,addForm,updateForm }) => {
 
   return (
     <div className='App'>
-  
+       <div className='App-header'>Your App Name</div>
     <form onSubmit={handleSubmit} className="p-4 bg-gray-100 items-center">
-    <div className='App-header'>Your App Name</div>
+   
       <h1 className="text-xl font-bold mb-4">
-        {form && form.id ? 'Edit Form' : 'Add Form'}
+        {form && form.id ? 'Edit Form' : 'Create New Form'}
       </h1>
     {form && Object.keys(form).map((key) =>getFormDetails(key,typeof(form[key]),form[key]))}
 
