@@ -1,5 +1,6 @@
 import ListView from './lib/components/ListView';
 import Newform from './lib/components/Newform';
+import './index.css';
 import {useState} from 'react';
 function App() {
 

@@ -1,5 +1,4 @@
 import React, { useEffect,useState,memo } from 'react';
-import './index.css';
 import './App.css';
 
 const Newform = ({ entity,addForm,updateForm,handleCancel }) => {
