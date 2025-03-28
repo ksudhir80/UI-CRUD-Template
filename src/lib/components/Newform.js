@@ -1,8 +1,8 @@
 import React, { useEffect,useState,memo } from 'react';
-import '../index.css';
+import './index.css';
 import './App.css';
 
-const Newform = ({ entity,addForm,updateForm }) => {
+const Newform = ({ entity,addForm,updateForm,handleCancel }) => {
   const [form, setForm] = useState(entity);
 
   useEffect(() => {
@@ -15,8 +15,8 @@ const Newform = ({ entity,addForm,updateForm }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
-    if (form && form.id) {
+    debugger;
+    if (entity && entity.id>0) {
            
         updateForm(form);
       
@@ -25,7 +25,7 @@ const Newform = ({ entity,addForm,updateForm }) => {
       addForm(form);
     }
    
-    {Object.keys(form).map((key) =>{setForm({key:''})})}
+    {Object.keys(form).map((key) =>{setForm(entity)})}
    
   };
 
@@ -90,13 +90,16 @@ const Newform = ({ entity,addForm,updateForm }) => {
     <form onSubmit={handleSubmit} className="p-4 bg-gray-100 items-center">
    
       <h1 className="text-xl font-bold mb-4">
-        {form && form.id ? 'Edit Form' : 'Create New Form'}
+        {entity && entity.id ? 'Edit Form' : 'Create New Form'}
       </h1>
     {form && Object.keys(form).map((key) =>getFormDetails(key,typeof(form[key]),form[key]))}
 
       <button className="bg-green-500 text-white px-4 py-2 rounded" type="submit">
-        {form && form.id ? 'Update' : 'Add'}
+        {entity && entity.id>0 ? 'Update' : 'Add'}
       </button>
+      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ml-2" onClick={handleCancel} type="button">
+  Cancel
+</button>
     </form>
     </div>
   );

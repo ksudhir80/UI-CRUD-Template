@@ -11,7 +11,7 @@ require("core-js/modules/esnext.iterator.constructor.js");
 require("core-js/modules/esnext.iterator.map.js");
 require("core-js/modules/web.dom-collections.iterator.js");
 var _react = _interopRequireWildcard(require("react"));
-require("../index.css");
+require("./index.css");
 require("./App.css");
 function _getRequireWildcardCache(e) { if ("function" != typeof WeakMap) return null; var r = new WeakMap(), t = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(e) { return e ? t : r; })(e); }
 function _interopRequireWildcard(e, r) { if (!r && e && e.__esModule) return e; if (null === e || "object" != typeof e && "function" != typeof e) return { default: e }; var t = _getRequireWildcardCache(r); if (t && t.has(e)) return t.get(e); var n = { __proto__: null }, a = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var u in e) if ("default" !== u && {}.hasOwnProperty.call(e, u)) { var i = a ? Object.getOwnPropertyDescriptor(e, u) : null; i && (i.get || i.set) ? Object.defineProperty(n, u, i) : n[u] = e[u]; } return n.default = e, t && t.set(e, n), n; }
@@ -24,7 +24,8 @@ const Newform = _ref => {
   let {
     entity,
     addForm,
-    updateForm
+    updateForm,
+    handleCancel
   } = _ref;
   const [form, setForm] = (0, _react.useState)(entity);
   (0, _react.useEffect)(() => {
@@ -34,16 +35,15 @@ const Newform = _ref => {
   }, [entity]);
   const handleSubmit = e => {
     e.preventDefault();
-    if (form && form.id) {
+    debugger;
+    if (entity && entity.id > 0) {
       updateForm(form);
     } else {
       addForm(form);
     }
     {
       Object.keys(form).map(key => {
-        setForm({
-          key: ''
-        });
+        setForm(entity);
       });
     }
   };
@@ -112,9 +112,13 @@ const Newform = _ref => {
     className: "p-4 bg-gray-100 items-center"
   }, /*#__PURE__*/_react.default.createElement("h1", {
     className: "text-xl font-bold mb-4"
-  }, form && form.id ? 'Edit Form' : 'Create New Form'), form && Object.keys(form).map(key => getFormDetails(key, typeof form[key], form[key])), /*#__PURE__*/_react.default.createElement("button", {
+  }, entity && entity.id ? 'Edit Form' : 'Create New Form'), form && Object.keys(form).map(key => getFormDetails(key, typeof form[key], form[key])), /*#__PURE__*/_react.default.createElement("button", {
     className: "bg-green-500 text-white px-4 py-2 rounded",
     type: "submit"
-  }, form && form.id ? 'Update' : 'Add')));
+  }, entity && entity.id > 0 ? 'Update' : 'Add'), /*#__PURE__*/_react.default.createElement("button", {
+    class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ml-2",
+    onClick: handleCancel,
+    type: "button"
+  }, "Cancel")));
 };
 var _default = exports.default = /*#__PURE__*/(0, _react.memo)(Newform);
