@@ -13,7 +13,6 @@ const ListView = ({ onEdit,dataList,deleteItem,pageName="Your Page Name" }) => {
     <div className='App'>
          <div className='App-header'>{pageName}</div>
     <div className="p-4">
-      <h1 className="text-xl font-bold mb-4">Item List</h1>
       <table className="min-w-full bg-white border">
         <thead key="colHead">
           <tr key="columns">

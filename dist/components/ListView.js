@@ -24,9 +24,7 @@ const ListView = _ref => {
     className: "App-header"
   }, pageName), /*#__PURE__*/_react.default.createElement("div", {
     className: "p-4"
-  }, /*#__PURE__*/_react.default.createElement("h1", {
-    className: "text-xl font-bold mb-4"
-  }, "Item List"), /*#__PURE__*/_react.default.createElement("table", {
+  }, /*#__PURE__*/_react.default.createElement("table", {
     className: "min-w-full bg-white border"
   }, /*#__PURE__*/_react.default.createElement("thead", {
     key: "colHead"
