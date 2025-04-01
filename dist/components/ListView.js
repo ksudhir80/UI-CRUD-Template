@@ -18,6 +18,8 @@ const ListView = _ref => {
     deleteItem(id);
   };
   return /*#__PURE__*/_react.default.createElement("div", {
+    className: "App"
+  }, /*#__PURE__*/_react.default.createElement("div", {
     className: "p-4"
   }, /*#__PURE__*/_react.default.createElement("h1", {
     className: "text-xl font-bold mb-4"
@@ -41,6 +43,6 @@ const ListView = _ref => {
   }, "Edit"), /*#__PURE__*/_react.default.createElement("button", {
     className: "bg-red-500 text-white px-2 py-1 rounded",
     onClick: () => handleDelete(Item.id)
-  }, "Delete")))))));
+  }, "Delete"))))))));
 };
 var _default = exports.default = ListView;

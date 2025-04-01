@@ -10,6 +10,7 @@ const ListView = ({ onEdit,dataList,deleteItem }) => {
       };
 
   return (
+    <div className='App'>
     <div className="p-4">
       <h1 className="text-xl font-bold mb-4">Item List</h1>
       <table className="min-w-full bg-white border">
@@ -45,6 +46,7 @@ const ListView = ({ onEdit,dataList,deleteItem }) => {
           ))}
         </tbody>
       </table>
+    </div>
     </div>
   );
 };
