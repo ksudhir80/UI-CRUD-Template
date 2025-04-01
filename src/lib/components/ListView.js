@@ -2,7 +2,7 @@ import React from 'react';
 
 
 
-const ListView = ({ onEdit,dataList,deleteItem }) => {
+const ListView = ({ onEdit,dataList,deleteItem,pageName="Your Page Name" }) => {
 
 
     const handleDelete = (id) => {
@@ -11,6 +11,7 @@ const ListView = ({ onEdit,dataList,deleteItem }) => {
 
   return (
     <div className='App'>
+         <div className='App-header'>{pageName}</div>
     <div className="p-4">
       <h1 className="text-xl font-bold mb-4">Item List</h1>
       <table className="min-w-full bg-white border">

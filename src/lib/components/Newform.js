@@ -1,7 +1,7 @@
 import React, { useEffect,useState,memo } from 'react';
 import './App.css';
 
-const Newform = ({ entity,addForm,updateForm,handleCancel }) => {
+const Newform = ({ entity,addForm,updateForm,handleCancel,pageName="Your Page Name" }) => {
   const [form, setForm] = useState(entity);
 
   useEffect(() => {
@@ -31,7 +31,8 @@ const Newform = ({ entity,addForm,updateForm,handleCancel }) => {
 
   
  const getFormDetails = (entity,type,value) => {
-
+if(entity==="id"){
+  return null;}
     switch(type){
       case 'string':
       return(
@@ -85,7 +86,7 @@ const Newform = ({ entity,addForm,updateForm,handleCancel }) => {
 
   return (
     <div className='App'>
-       <div className='App-header'>Your App Name</div>
+       <div className='App-header'>{pageName}</div>
     <form onSubmit={handleSubmit} className="p-4 bg-gray-100 items-center">
    
       <h1 className="text-xl font-bold mb-4">

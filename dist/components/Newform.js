@@ -24,7 +24,8 @@ const Newform = _ref => {
     entity,
     addForm,
     updateForm,
-    handleCancel
+    handleCancel,
+    pageName = "Your Page Name"
   } = _ref;
   const [form, setForm] = (0, _react.useState)(entity);
   (0, _react.useEffect)(() => {
@@ -47,6 +48,9 @@ const Newform = _ref => {
     }
   };
   const getFormDetails = (entity, type, value) => {
+    if (entity === "id") {
+      return null;
+    }
     switch (type) {
       case 'string':
         return /*#__PURE__*/_react.default.createElement("div", {
@@ -106,7 +110,7 @@ const Newform = _ref => {
     className: "App"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "App-header"
-  }, "Your App Name"), /*#__PURE__*/_react.default.createElement("form", {
+  }, pageName), /*#__PURE__*/_react.default.createElement("form", {
     onSubmit: handleSubmit,
     className: "p-4 bg-gray-100 items-center"
   }, /*#__PURE__*/_react.default.createElement("h1", {

@@ -12,7 +12,8 @@ const ListView = _ref => {
   let {
     onEdit,
     dataList,
-    deleteItem
+    deleteItem,
+    pageName = "Your Page Name"
   } = _ref;
   const handleDelete = id => {
     deleteItem(id);
@@ -20,6 +21,8 @@ const ListView = _ref => {
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "App"
   }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "App-header"
+  }, pageName), /*#__PURE__*/_react.default.createElement("div", {
     className: "p-4"
   }, /*#__PURE__*/_react.default.createElement("h1", {
     className: "text-xl font-bold mb-4"
