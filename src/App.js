@@ -86,8 +86,8 @@ const handleCancel = () => {
 
   return (
     <div>
-   <Newform entity={entity}  addForm={addForm} updateForm={updateForm}   handleCancel={handleCancel}   />
-   <ListView onEdit={setEntity} dataList={entities} deleteItem={handleDelete} />
+   <Newform entity={entity}  addForm={addForm} updateForm={updateForm}   handleCancel={handleCancel} pageName="my page" />
+   <ListView onEdit={setEntity} dataList={entities} deleteItem={handleDelete} pageName='my list' />
     </div>
   );
 }
