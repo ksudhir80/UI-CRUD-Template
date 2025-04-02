@@ -6,7 +6,9 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 require("core-js/modules/esnext.iterator.constructor.js");
 require("core-js/modules/esnext.iterator.map.js");
+require("core-js/modules/web.dom-collections.iterator.js");
 var _react = _interopRequireDefault(require("react"));
+var _DeleteConfirm = _interopRequireDefault(require("./DeleteConfirm"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
 const ListView = _ref => {
   let {
@@ -15,8 +17,18 @@ const ListView = _ref => {
     deleteItem,
     pageName = "Your Page Name"
   } = _ref;
+  const [isShowDeleteModel, setIsShowDeleteModel] = _react.default.useState(false);
+  const [deleteID, setDeleteID] = _react.default.useState(0);
+  const onDeleteConfirm = id => {
+    if (id) {
+      deleteItem(id);
+    }
+    setIsShowDeleteModel(false);
+  };
   const handleDelete = id => {
-    deleteItem(id);
+    debugger;
+    setDeleteID(id);
+    setIsShowDeleteModel(true);
   };
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "App"
@@ -44,6 +56,10 @@ const ListView = _ref => {
   }, "Edit"), /*#__PURE__*/_react.default.createElement("button", {
     className: "bg-red-500 text-white px-2 py-1 rounded",
     onClick: () => handleDelete(Item.id)
-  }, "Delete"))))))));
+  }, "Delete"))))))), /*#__PURE__*/_react.default.createElement(_DeleteConfirm.default, {
+    onDelete: onDeleteConfirm,
+    deleteID: deleteID,
+    showModel: isShowDeleteModel
+  }));
 };
 var _default = exports.default = ListView;
