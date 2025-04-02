@@ -1,3 +1,4 @@
 import Newform from "./components/Newform";
 import ListView from "./components/ListView";
-export { Newform, ListView };
+import DeleteConfirm from "./components/DeleteConfirm";
+export { Newform, ListView,DeleteConfirm };
