@@ -1,6 +1,8 @@
 import React from 'react';
 import DeleteConfirm from './DeleteConfirm';
 
+export {DeleteConfirm};
+
 
 const ListView = ({ onEdit,dataList,deleteItem,pageName="Your Page Name" }) => {
 

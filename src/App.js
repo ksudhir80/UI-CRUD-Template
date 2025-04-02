@@ -34,8 +34,8 @@ function App() {
 
 const addForm = (itm) => {
   debugger;
-  const updatedEntity = entities.filter((item) => item.id !== itm.id);
-  if(itm.id>0 && !updatedEntity){
+  const updatedEntity = entities.filter((item) => item.id == itm.id);
+  if(updatedEntity.length==0){
    const newList=  [...entities,itm];
  setEntities(newList);
  alert("Item Added Successfully");

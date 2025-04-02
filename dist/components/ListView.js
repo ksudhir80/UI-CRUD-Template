@@ -3,6 +3,12 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+Object.defineProperty(exports, "DeleteConfirm", {
+  enumerable: true,
+  get: function get() {
+    return _DeleteConfirm.default;
+  }
+});
 exports.default = void 0;
 require("core-js/modules/esnext.iterator.constructor.js");
 require("core-js/modules/esnext.iterator.map.js");
