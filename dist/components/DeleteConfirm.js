@@ -73,4 +73,4 @@ const DeleteConfirm = _ref => {
     className: "mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 shadow-xs ring-gray-300 ring-inset hover:bg-gray-50 sm:mt-0 sm:w-auto"
   }, "Delete"))))));
 };
-var _default = exports.default = DeleteConfirm;
+var _default = exports.default = /*#__PURE__*/(0, _react.memo)(DeleteConfirm);

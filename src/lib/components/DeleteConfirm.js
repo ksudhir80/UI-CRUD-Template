@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState,useEffect,memo } from 'react';
 import { Dialog, DialogBackdrop, DialogPanel, DialogTitle } from '@headlessui/react'
 //import { ExclamationTriangleIcon } from '@heroicons/react/24/outline'
 
@@ -74,4 +74,4 @@ return(
 )
 };
 
-export default DeleteConfirm;
+export default memo(DeleteConfirm);
